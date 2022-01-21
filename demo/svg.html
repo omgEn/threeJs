@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    SVG是一种基于XML的图像文件格式。
+    Scalable Vector Graphics,可缩放的矢量图形。
+   在绘图场景中， svg比canvas在dom操作上开销大很多
+   -->
+   <svg width='800' height='800'>
+      <rect width='50' height='50' style='fill:red;stroke-width: 1px;stroke:rgb(0,0,0)'/>
+      <line 
+        x1='100'
+        y1='100'
+        x2='200'
+        y2='250'
+        style='stroke:blue;stroke-width:1'
+      />
+      <circle 
+        cx='200'
+        cy='200'
+        r='50'
+        stroke='green'
+        stroke-width='2'
+        fill='red'
+      />
+
+      <line 
+        x1='400'
+        y1='400'
+        x2='401'
+        y2='401'
+        style='stroke:blue;stroke-width:1'
+      />
+   </svg>
+   <!-- webgl 是一种3D绘图协议，可为HTML5 Canvas提供硬件3D加速渲染 -->
+</body>
+</html>

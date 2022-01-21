@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/zrender/5.2.1/zrender.js"></script>
+  <style>
+    #container{
+      width: 800px;
+      height: 800px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    zrender是二维绘图引擎，提供Canvas、SVG、VML等多种渲染方式。ZRender也是ECharts的渲染器。
+   -->
+   <div id="container"></div>
+   <script>
+     var zr = zrender.init(document.getElementById('container'));
+     var circle = new zrender.Circle({
+     shape: {
+      cx: 150,
+      cy: 50,
+      r: 40
+     },
+     style: {
+      fill: 'none',
+      stroke: '#F00'
+      }
+     });
+     zr.add(circle);
+
+     var line = new zrender.Polyline({
+       shape: {
+         points:[
+           [100,100],
+           [250,75],
+           [300,80],
+         ]
+       },
+       style: {
+         stroke: 'blue',
+         lineWidth: 1
+       }
+     })
+     zr.add(line);
+   </script>
+</body>
+</html>
